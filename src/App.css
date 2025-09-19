@@ -9,7 +9,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #131218f7;
+  background-color: #1a1825f7;
   padding: 2rem;
   border-bottom: rgba(255, 255, 255, 0.3);
 
@@ -56,7 +56,7 @@ header{
 }
 
 body{
-  background-color: rgb(11, 8, 20);
+  background-color: rgb(18, 18, 18);
   min-height: 100vh;
 }
 
@@ -65,22 +65,66 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 40px;
+  padding: 2rem 0;
 }
 
 .mapContainer{
-  width: 80%;
+  width: 90%;
   height: 50vh;
 }
 
-.inputsCont{
+.search{
+  display: flex;
+  flex-direction: column;
   width: 90%;
-  height: 250px;
+  height: auto;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 2rem 6rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
+  border-radius: 20px;
+
+  .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    button{
+      padding: .9rem 2rem;
+      border-radius: 10px;
+      border: none;
+
+    }
+    .clear{
+          background-color: transparent;
+      border: 1px solid rgb(0, 187, 255);
+      transition: .5s ease;
+      color: #fff;
+
+      &:hover{
+        background-color: rgb(0, 187, 255);
+      }
+    }
+
+    .fetch{
+       background-color: rgba(0, 187, 255);
+      color: #fff;
+
+      &:hover{
+        background-color: rgb(0, 133, 182);
+      }
+    }
+  }
+}
+
+.inputsCont{
+  display: flex;
+  justify-content: space-between;
+
 
   .input{
     display: flex;
@@ -89,7 +133,7 @@ body{
 
     .inputContent{
       
-      background-color: #131218f7;
+      background-color: rgb(38, 38, 38);
       width: 225px;
       height: 50px;
       border-radius: 10px;
@@ -122,7 +166,95 @@ body{
   .dropdown{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
+    position: relative;
+
+    select{
+      background-color: rgb(38, 38, 38);
+      width: 255px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      padding: 1rem;
+    }
   }
+
+  .select{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .selects{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+.jobTitleSection{
+  color: #fff;
+  font-size: 2rem;  
+}
+
+.resultsJob {
+  width: 90%;
+  padding: 20px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.jobList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  place-items: center;
+}
+.jobCard {
+  border-radius: 8px;
+  padding:  20px 30px;
+  background-color: #131313;
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  cursor: pointer;
+
+  .headerCard{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo{
+    width: 10%;
+    border-radius: 50%;
+  }
+}
+
+.infos{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.buttonMore{
+  padding: .9rem 2rem;
+  background-color: rgb(0, 187, 255);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
 }
